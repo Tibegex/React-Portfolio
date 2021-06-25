@@ -1,0 +1,287 @@
+* {
+  /* calculates the size of the element to include the margin, border, and padding */
+  box-sizing: border-box;
+}
+
+body {
+  /* making a flexcontainer */
+  display: flex;
+  /* changing the main axis to y */
+  flex-direction: column;
+  /* controls the hight of the line box aka double spacing */
+  line-height: 1.3;
+  /* adjusts the bottom margin size */
+  margin-bottom: 6%;
+}
+/* 
+  HEADER */
+header {
+  display: flex;
+  /* increase padding top bottom left and right by value */
+  padding: 1%;
+  /* changes background color */
+  background-color: rgb(110, 5, 5);
+  /* changes color of text */
+  color: white;
+  /* aligns the items in a flexbox along the main axis with equal space */
+  justify-content: space-between;
+  /* holds item in current location in the view port */
+  position: sticky;
+  /* refrences where i want the sticky to hold the item */
+  top: 0;
+  /* width that the flex container will take up on the view port */
+  width: 100%;
+  /* the height of the flex container */
+  height: 7%;
+  /* Moves the item to the specific layer, in this case 99 to prevent the picture from scrolling over it */
+  z-index: 99;
+}
+
+h1 {
+  /* controls font size */
+  font-size: 200%;
+  /* flex: 0 0 100%; */
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  /* The very minimum of the item can be is the value. */
+  min-width: 7%;
+}
+
+nav a {
+  /* changes the boldness of the font. */
+  font-weight: bold;
+  /* Controls the decoration of a text. */
+  text-decoration: none;
+  color: white;
+}
+li {
+  width: 150px;
+}
+nav ul li :hover {
+  background-color: yellow;
+  color: black;
+  /* font-size: 20px; */
+  /* width: 50px;
+    height: 50px;
+    transition: width 2s, height 2s; */
+}
+nav ul li a:active {
+  color: blueviolet;
+  background-color: cadetblue;
+  font-size: 80%;
+}
+nav ul li {
+  /* transition: width 2s, height 2s; */
+}
+
+.rookbIcon:before {
+  /* this is referencing a specific ID */
+  content: "\2656";
+  padding: 1%;
+}
+.rookaIcon::after {
+  content: "\2656";
+  padding: 1%;
+}
+.bishopbIcon::before {
+  content: "\2657";
+  padding: 1%;
+}
+.bishopaIcon::after {
+  content: "\2657";
+  padding: 1%;
+}
+.knightbIcon::before {
+  content: "\265E";
+  padding: 1%;
+}
+.knightaIcon::before {
+  content: "\265E";
+  padding: 1%;
+}
+.bbishopbIcon::before {
+  content: "\265D";
+  padding: 1%;
+}
+.bbishopaIcon::after {
+  content: "\265D";
+  padding: 1%;
+}
+/* 
+  MAIN */
+main {
+  display: flex;
+  border: 5px groove lightblue;
+  /* changes the main axis to y */
+  flex-direction: column;
+  /* Moves the children along the main axis */
+  justify-content: center;
+  /* moves the children along the cross axis */
+  text-align: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}
+
+/* 
+  SECTION PROJECTS */
+.projects {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  /* border: solid blue 5px; */
+  flex-wrap: wrap;
+  text-decoration: none;
+  background-color: lightblue;
+}
+#aboutme,
+#projects {
+  scroll-margin-top: 4.5rem;
+}
+#pprojects {
+}
+
+*/ img {
+  /* scales the image container: auto prevents distoritions */
+  scale: auto;
+}
+div figure a {
+  text-decoration: none;
+}
+
+.container {
+  /* position: relative;
+    text-align: center; */
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+div figure:first-child {
+  /* this is short hand for Grow, Shrink, and Basis */
+  flex: 1 0 100%;
+}
+
+section a {
+  display: block;
+  flex: 1 0 33.3%;
+}
+figure {
+  /* Position: relative; is relative to the parent */
+  position: relative;
+  flex: 1 0 33.3%;
+  /* border: 1px solid red; */
+  /* changes the element to either inline or block */
+  display: inline;
+}
+
+.project1 {
+  color: black;
+  text-decoration: none;
+}
+
+.resume {
+  border: 5px groove lightblue;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+/* 
+  FOOTER */
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(110, 5, 5);
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 10%;
+}
+.contactme {
+  color: white;
+  font-size: 14px;
+}
+
+.cfooter {
+  display: flex;
+
+  text-align: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+footer ul li {
+  font-weight: bold;
+  color: white;
+  width: 25%;
+}
+
+footer ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  justify-content: space-around;
+}
+footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 7%;
+}
+
+/* Provides a change point when the page is viewed on a different size */
+@media screen and (max-width: 992px) {
+  * {
+    margin-top: 3%;
+    margin-bottom: 20%;
+    font-size: 12px;
+  }
+  footer {
+    background-color: blue;
+    flex-direction: column;
+    justify-content: stretch;
+    font-size: 90%;
+    min-height: 15%;
+  }
+  h1 {
+    font-size: 120%;
+  }
+
+  header {
+    background-color: blue;
+    flex-direction: column;
+    justify-content: stretch;
+    min-height: 10%;
+  }
+}
+
+/* 
+  RESPONSIVENES AT 768 PX */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+    scroll-margin-top: 7rem;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header {
+    width: 425px;
+  }
+  img {
+    scale: 425px 425px;
+  }
+  Div figure:first-child {
+    /* width: 100px;
+      height: 100px; */
+  }
+}
