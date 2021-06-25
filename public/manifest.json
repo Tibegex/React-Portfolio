@@ -1,0 +1,35 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "callendar.PNG",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "man-3414477_640.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "Quiz.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "Randomnumgen.PNG",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "Yoda-SS-2.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
